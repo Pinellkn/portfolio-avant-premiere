@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import Lenis from "lenis";
 import { EXPS, FORMS, ME, PROJECTS, SKILLS } from "./data";
+import CurtainCanvas from "./Curtain";
 
 /* ---------- utilitaires ---------- */
 function useClock() {
@@ -145,25 +146,26 @@ function Hero() {
   const time = useClock();
   return (
     <section id="top" className="hero wine">
+      <CurtainCanvas />
       <div className="hin">
         <Label>NOW SHOWING</Label>
         <h1 className="name">
           <span className="ml">
-            <span style={{ animationDelay: "0.1s" }}>Pinel</span>
+            <span style={{ animationDelay: "1.6s" }}>Pinel</span>
           </span>
           <span className="ml">
-            <span style={{ animationDelay: "0.25s" }}>LOKONON</span>
+            <span style={{ animationDelay: "1.75s" }}>LOKONON</span>
           </span>
         </h1>
-        <p className="tag fin" style={{ animationDelay: "0.7s" }}>
+        <p className="tag fin" style={{ animationDelay: "2.2s" }}>
           Un développeur full-stack qui construit des expériences web et mobiles intentionnelles.
         </p>
-        <a className="btn mono fin" style={{ animationDelay: "0.82s" }} href={`mailto:${ME.email}`}>
+        <a className="btn mono fin" style={{ animationDelay: "2.35s" }} href={`mailto:${ME.email}`}>
           <span>REACH OUT</span>
           <i>→</i>
         </a>
       </div>
-      <div className="acts mono">
+      <div className="acts mono late">
         <a href="#work">
           <span className="dim">ACT I</span> LE TRAVAIL
         </a>
@@ -174,7 +176,7 @@ function Hero() {
           <span className="dim">{ME.city}</span> {time}
         </span>
       </div>
-      <a href="#prologue" className="badge mono">
+      <a href="#prologue" className="badge mono late">
         TAKE YOUR SEAT ↓
       </a>
     </section>
